@@ -7,13 +7,13 @@ window.onload = function () {
 	const audio = document.querySelector('audio')
 
 	window.onclick = function(e) {
-		if (e.target = playBtn && audio.paused) {
+		if (e.target === playBtn && audio.paused) {
 			playBtn.classList.toggle('hide')
 			pauseBtn.classList.toggle('hide')
 			audio.play()
 		}
 
-		else if (e.target = pauseBtn && audio.played) {
+		else if (e.target === pauseBtn && audio.played) {
 			playBtn.classList.toggle('hide')
 			pauseBtn.classList.toggle('hide')
 			audio.pause()
