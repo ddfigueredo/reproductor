@@ -5,20 +5,33 @@ window.onload = function () {
 	const nextBtn = document.querySelector('.next')
 	const firstRow = document.querySelector('.first-row')
 	const audio = document.querySelector('audio')
+	const volumeButton = document.querySelector('.button-volume')
+	const containerSlider = document.querySelector('.container-slider')
+	const volumeSlider = document.querySelector('.slider-volume')
 
-	window.onclick = function(e) {
-		if (e.target === playBtn && audio.paused) {
-			playBtn.classList.toggle('hide')
-			pauseBtn.classList.toggle('hide')
-			audio.play()
-		}
-
-		else if (e.target === pauseBtn && audio.played) {
-			playBtn.classList.toggle('hide')
-			pauseBtn.classList.toggle('hide')
-			audio.pause()
-		}
+	playBtn.onclick = function() {
+		console.log('toque')
+		playBtn.classList.toggle('hide')
+		pauseBtn.classList.toggle('hide')
+		audio.play()
 	}
 
+	pauseBtn.onclick = function() {
+		console.log('toque')
+		pauseBtn.classList.toggle('hide')
+		playBtn.classList.toggle('hide')
+		audio.pause()
+	}
 
+	volumeButton.onmouseover = function() {
+		containerSlider.style.visibility = 'visible'
+	}
+
+	volumeButton.onmouseout = function() {
+		containerSlider.style.visibility = 'hidden'
+	}
+
+	volumeSlider.onchange = function(e) {
+		audio.volume = e.target.value
+	}
 }
