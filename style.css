@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap');
+
 body {
 	margin: 0;
 	overflow: hidden;
@@ -5,6 +7,7 @@ body {
 
 h1, p {
 	font-family: 'Domine', serif;
+	color: #797d7f;
 }
 
 div {
@@ -24,6 +27,21 @@ img {
 	background: #E0E5EC;
 }
 
+.title-container {
+	position: absolute;
+  background: #E0E5EC;
+  width: 50%;
+  height: 7%;
+  top: 13%;
+  border-radius: 5em;
+  box-shadow: 9px 9px 15px #0001, -1px -1px 30px #FFFFFF;
+}
+
+.title-song {
+	font-size: 4vh;
+	transition: all 0.5s linear;
+}
+
 .first-row {
 	position: absolute;
 	top: 25%;
@@ -33,8 +51,33 @@ img {
 	border-radius: 5em;
 	z-index: 1;
 	transition: 0.8s linear;
-	box-shadow: 9px 9px 30px #0001,
-	-9px -9px 30px #FFFFFF; 
+	box-shadow: 9px 9px 15px #0001,
+	-2px -2px 30px #FFFFFF; 
+}
+
+.timer-container {
+	position: absolute;
+  background: #E0E5EC;
+  width: 50%;
+  height: 7%;
+  top: 56%;
+  border-radius: 5em;
+  box-shadow: 9px 9px 15px #0001, -1px -1px 30px #FFFFFF;
+}
+
+.timer-song {
+	position: absolute;
+	width: 0%;
+	height: 40%;
+	background: #797d7f;
+	border-radius: 5em;
+	left: 5%;
+	transition: 0.2s linear;
+}
+
+.duration-song {
+	font-size: 4vh;
+	transition: all 0.5s linear;
 }
 
 .button {
@@ -79,35 +122,33 @@ img {
 
 .container-volume {
 	position: absolute;
-	top: 15%;
+	top: 54%;
 	width: 10%;
-	height: 35%;
+	height: 10%;
 	right: 15%;
-	display: none;
-}
-
-.container-slider {
-	position: absolute;
-	top: 0%;
-	width: 55%;
-	height: 68%;
-	background: #E0E5EC;
-	border-radius: 2em;
-	box-shadow: -8px -8px 20px -3px #fff9, 5px 5px 6px -3px #0001;
-	transition: visibility 1s linear;
-	visibility: hidden;
-}
-
-.slider-volume {
-	position: absolute;
-	width: 205%;
-  transform: rotate(-90deg);
 }
 
 .button-volume {
 	position: absolute;
-  width: 55%;
-  height: 30%;
+  width: 50%;
+  height: 95%;
+  bottom: 0;
+  background: #E0E5EC;
+  border-radius: 50%;
+}
+
+.container-random {
+	position: absolute;
+	top: 54%;
+	width: 10%;
+	height: 10%;
+	left: 15%;
+}
+
+.button-random {
+	position: absolute;
+  width: 50%;
+  height: 95%;
   bottom: 0;
   background: #E0E5EC;
   border-radius: 50%;
@@ -116,11 +157,3 @@ img {
 
 
 
-/*.second-row {
-	position: absolute;
-  top: 40%;
-  width: 45%;
-  height: 20%;
-  background-color: #FF9FC9;
-  border-radius: 5em;
-}*/
